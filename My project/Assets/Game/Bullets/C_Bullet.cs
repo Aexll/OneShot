@@ -41,6 +41,7 @@ public class C_Bullet : MonoBehaviour
     // start
     private void StartGame()
     {
+        orientTowardMovement.gameObject.SetActive(true);
         _collider.enabled = false;
         Invoke(nameof(EnableCollision), 0.5f);
         if(rb.bodyType == RigidbodyType2D.Dynamic)
@@ -49,11 +50,13 @@ public class C_Bullet : MonoBehaviour
 
     private void StartAim()
     {
-
+        _collider.enabled = false;
     }
 
     private void StartRewind()
     {
+        orientTowardMovement.gameObject.SetActive(false);
+        _collider.enabled = false;
     }
 
     public void EnableCollision()

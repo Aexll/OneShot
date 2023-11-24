@@ -84,12 +84,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129767439704089453}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2878186213930164096}
+  m_Father: {fileID: 7069088540952553057}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2486266351740529444
 SpriteRenderer:
@@ -258,6 +258,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1494004642530740310}
+  - {fileID: 6513638905076589637}
   m_Father: {fileID: 2878186213930164096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3732930164883474967
@@ -293,7 +294,6 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6513638905076589637}
   - {fileID: 7069088540952553057}
   - {fileID: 1084254497793850206}
   m_Father: {fileID: 0}
@@ -316,7 +316,7 @@ MonoBehaviour:
   orientTowardMovement: {fileID: 7069088540952553057}
   rb: {fileID: 3836371451579448203}
   _collider: {fileID: 4139859895865015066}
-  impulse: 10
+  impulse: 20
 --- !u!114 &1403104320049600961
 MonoBehaviour:
   m_ObjectHideFlags: 0

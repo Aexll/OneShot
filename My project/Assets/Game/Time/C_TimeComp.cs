@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class C_TimeComp : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class C_TimeComp : MonoBehaviour
     {
         if (history.ContainsKey(frame))
         {
-            ApplyFrame(history[frame], history.ContainsKey(frame+1));
+            ApplyFrame(history[frame], !history.ContainsKey(frame+1));
         }
         else
         {
