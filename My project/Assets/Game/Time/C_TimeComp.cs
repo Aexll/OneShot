@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
+using UnityEngine.Events;
 
 public class C_TimeComp : MonoBehaviour
 {
@@ -16,6 +16,9 @@ public class C_TimeComp : MonoBehaviour
 
     // privates
     private Coroutine currentCoroutine;
+
+    public UnityEvent OnStartWriteHistory;
+    public UnityEvent OnStartReadHistory;
 
 
     // infos
@@ -42,15 +45,28 @@ public class C_TimeComp : MonoBehaviour
         OnFramePlay(GT.TickIndex);
     }
 
+
+    public bool isreadinghistory = false;
+
     // apply the frame at index if already in history, create it if not
     public void OnFramePlay(int frame)
     {
         if (history.ContainsKey(frame))
         {
+            if (isreadinghistory)
+            {
+                isreadinghistory = false;
+                OnStartReadHistory?.Invoke();
+            }
             ApplyFrame(history[frame], !history.ContainsKey(frame+1));
         }
         else
         {
+            if (!isreadinghistory)
+            {
+                isreadinghistory = true;
+                OnStartWriteHistory?.Invoke();
+            }
             history[frame] = GetCurrentTimeframe();
         }
     }
