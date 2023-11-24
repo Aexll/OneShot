@@ -18,6 +18,7 @@ public class SO_GameInfo : ScriptableObject
     public UnityEvent StartAiming;
     public UnityEvent StartGame;
     public UnityEvent StartRewind;
+    public UnityEvent<string> OnPlayerWin;
 
     // values
     public GameState State;

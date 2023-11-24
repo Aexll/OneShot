@@ -185,6 +185,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GI: {fileID: 11400000, guid: 5a9c4bb5481987c42a4398afa7690242, type: 2}
+  GameManager: {fileID: 0}
+  playerName: Red
   inputMapping: {fileID: 11400000, guid: feb9dc4ed81f5714c84b2e48d86c0df1, type: 2}
   rb: {fileID: 652805831557684060}
   speed: 10
@@ -194,6 +196,11 @@ MonoBehaviour:
   moveMode: 0
   aimMode: 0
   bulletPrefab: {fileID: 3732930164883474967, guid: 5c5b8fc601c3fc540b70a9c14aedd27f, type: 3}
+  defaultPosition: {x: 0, y: 0}
+  defaultRotationAngle: 0
+  OnPlayerDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &652805831557684060
 Rigidbody2D:
   serializedVersion: 4

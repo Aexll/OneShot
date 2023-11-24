@@ -10,6 +10,7 @@ public class DebugUI : MonoBehaviour
 
     public TextMeshProUGUI txttick;
     public TextMeshProUGUI txtstate;
+    public TextMeshProUGUI playerwin;
 
     private void OnEnable()
     {
