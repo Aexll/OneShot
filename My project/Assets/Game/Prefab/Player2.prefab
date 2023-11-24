@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputMapping: {fileID: 11400000, guid: 1c955cfc828d65a40ada6133f4675b4c, type: 2}
   rb: {fileID: 5802903355983998316}
-  speed: 10
+  speed: 15
   inputDirection: {x: 0, y: 0}
 --- !u!50 &5802903355983998316
 Rigidbody2D:
