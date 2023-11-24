@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameTickManager : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class GameTickManager : MonoBehaviour
 
 
     public GameTick GT;
+
+
+    public UnityEvent<int> OnTick;
+    public UnityEvent<float> OnTickTime;
+    public UnityEvent<string> OnTickTimeString;
 
 
     private void OnEnable()
@@ -36,6 +42,9 @@ public class GameTickManager : MonoBehaviour
     { 
         if (!GT.isPaused)
             GT.TickIndex++;
+        OnTick?.Invoke(GT.TickIndex);
+        OnTickTime?.Invoke(GT.TickIndex * GT.tickDelta);
+        OnTickTimeString?.Invoke((GT.TickIndex * GT.tickDelta).ToString());
     }
 
     public void StartGame()
@@ -51,6 +60,7 @@ public class GameTickManager : MonoBehaviour
     public void StartRewind()
     {
         GT.isPaused = true;
+        GT.TickIndex = 0;
     }
 
 

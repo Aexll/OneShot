@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class C_BaseController : MonoBehaviour
 {
     // know the game state
     public SO_GameInfo GI;
+    public C_GameManager GameManager;
+
+    // infos
+    public string playerName;
 
 
     public SO_InputMapping inputMapping;
@@ -24,6 +29,10 @@ public class C_BaseController : MonoBehaviour
 
     public Vector2 defaultPosition;
     public float defaultRotationAngle;
+
+
+    // events
+    public UnityEvent OnPlayerDie;
 
     private void Awake()
     {
@@ -65,7 +74,7 @@ public class C_BaseController : MonoBehaviour
     {
         moveMode = true;
         aimMode = false;
-        stopedMode =false;  
+        stopedMode = false;  
 
         GameObject spawnedbullet = Instantiate(bulletPrefab);
         spawnedbullet.transform.position = transform.position;
@@ -74,7 +83,6 @@ public class C_BaseController : MonoBehaviour
 
     private void StartAim()
     {
-        ResetPosAndRot();
         aimMode = true;
         moveMode = false;
         stopedMode = false;
@@ -82,6 +90,7 @@ public class C_BaseController : MonoBehaviour
 
     private void StartRewind()
     {
+        ResetPosAndRot();
         aimMode = false;
         moveMode = false;
         stopedMode = true;
@@ -89,15 +98,15 @@ public class C_BaseController : MonoBehaviour
 
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "dmg")
+        if (collision.gameObject.tag == "dmg")
         {
+            OnPlayerDie?.Invoke();
+            GI.OnPlayerWin?.Invoke(playerName);
             Destroy(gameObject);
         }
     }
-
-
 
 
 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c069d6b2f5be94e89222be19653e80, type: 3}
   m_Name: GameTick
   m_EditorClassIdentifier: 
-  tickDelta: 0.1
+  tickDelta: 0.05
   isPaused: 1
   OnTickIndexChanged:
     m_PersistentCalls:
