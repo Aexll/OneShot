@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.Events;
 using static UnityEngine.UI.ContentSizeFitter;
 
 public class C_Bullet : MonoBehaviour
@@ -15,6 +16,11 @@ public class C_Bullet : MonoBehaviour
     public Collider2D _collider;
 
     public float impulse = 1;
+
+
+    //events
+    public UnityEvent OnBulletLaunched;
+    public UnityEvent OnBulletBounce;
 
 
     private void OnEnable()
@@ -46,12 +52,15 @@ public class C_Bullet : MonoBehaviour
         LayerMask inmasks = new LayerMask();
         LayerMask exmasks = new LayerMask();
         inmasks.value = LayerMask.GetMask("Walls");
-        exmasks.value = LayerMask.GetMask("Bullet", "Player");
+        exmasks.value = LayerMask.GetMask("Bullet", "PastBullet", "Player");
         _collider.excludeLayers = exmasks;
         _collider.includeLayers = inmasks;
         Invoke(nameof(EnableCollision), 0.5f);
         if(rb.bodyType == RigidbodyType2D.Dynamic)
+        {
             rb.AddForce(transform.right * impulse, ForceMode2D.Impulse);
+            OnBulletLaunched?.Invoke();
+        }
     }
 
     private void StartAim()
@@ -63,6 +72,7 @@ public class C_Bullet : MonoBehaviour
     {
         orientTowardMovement.gameObject.SetActive(false);
         _collider.enabled = false;
+        gameObject.layer = 9;
     }
 
     public void EnableCollision()
@@ -71,7 +81,7 @@ public class C_Bullet : MonoBehaviour
         LayerMask inmasks = new LayerMask();
         LayerMask exmasks = new LayerMask();
         inmasks.value = LayerMask.GetMask("Player","Walls");
-        exmasks.value = LayerMask.GetMask("Bullet");
+        exmasks.value = LayerMask.GetMask("Bullet","PastBullet");
         _collider.excludeLayers = exmasks;
         _collider.includeLayers = inmasks;
     }
@@ -92,5 +102,11 @@ public class C_Bullet : MonoBehaviour
         }
     }
 
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        OnBulletBounce?.Invoke();
+    }
+
+
 }
