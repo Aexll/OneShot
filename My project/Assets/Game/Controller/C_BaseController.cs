@@ -25,11 +25,15 @@ public class C_BaseController : MonoBehaviour
     public bool aimMode = false;
 
     public GameObject bulletPrefab;
+    public GameObject bulletPrefab_bonus = null;
 
 
     public Vector2 defaultPosition;
     public float defaultRotationAngle;
 
+
+    public UnityEvent EventPlayGame;
+    public UnityEvent EventPlayAim;
 
     // events
     public UnityEvent OnPlayerDie;
@@ -72,17 +76,37 @@ public class C_BaseController : MonoBehaviour
     // start
     private void StartGame()
     {
+        EventPlayGame?.Invoke();
+        ShootBullets();
         moveMode = true;
         aimMode = false;
         stopedMode = false;  
 
-        GameObject spawnedbullet = Instantiate(bulletPrefab);
+    }
+
+    public void ShootBullets()
+    {
+        GameObject selectedPrefab;
+
+        selectedPrefab = bulletPrefab;
+
+        // use the bonus
+        if(bulletPrefab_bonus != null)
+            selectedPrefab = bulletPrefab_bonus;
+
+
+
+        GameObject spawnedbullet = Instantiate(selectedPrefab);
         spawnedbullet.transform.position = transform.position;
         spawnedbullet.transform.rotation = transform.rotation;
+
+        // remove bonus
+        bulletPrefab_bonus = null;
     }
 
     private void StartAim()
     {
+        EventPlayAim?.Invoke();
         aimMode = true;
         moveMode = false;
         stopedMode = false;
