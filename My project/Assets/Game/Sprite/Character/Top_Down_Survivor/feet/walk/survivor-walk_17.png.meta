@@ -164,7 +164,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-walk_17_0: -2909475982082734625
+      survivor-walk_17_1: 7538786217426396811
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

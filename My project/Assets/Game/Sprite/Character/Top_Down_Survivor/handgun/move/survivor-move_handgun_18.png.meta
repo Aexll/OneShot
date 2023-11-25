@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-move_handgun_18_0: 8585531456920477121
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

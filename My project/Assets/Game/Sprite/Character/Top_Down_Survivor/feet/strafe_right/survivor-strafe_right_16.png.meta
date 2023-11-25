@@ -164,7 +164,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-strafe_right_16_0: -6859891187505091184
+      survivor-strafe_right_16_1: -7348222721027536790
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
