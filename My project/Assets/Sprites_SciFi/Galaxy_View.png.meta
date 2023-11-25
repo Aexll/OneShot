@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Galaxy_View_0: 5692991415414712409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

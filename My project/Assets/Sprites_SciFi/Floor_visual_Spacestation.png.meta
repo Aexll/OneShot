@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Floor_visual_Spacestation_0: -3563854819461554101
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

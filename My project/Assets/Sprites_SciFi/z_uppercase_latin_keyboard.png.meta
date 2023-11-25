@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      z_uppercase_latin_keyboard_0: 5119218167300272614
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

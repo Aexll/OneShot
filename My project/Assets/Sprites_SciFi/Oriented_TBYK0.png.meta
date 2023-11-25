@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Oriented_TBYK0_0: 6913432045478330568
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

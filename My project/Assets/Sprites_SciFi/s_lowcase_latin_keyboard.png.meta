@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      s_lowcase_latin_keyboard_0: -8765489132633880225
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
