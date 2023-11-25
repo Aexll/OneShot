@@ -419,6 +419,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &54365411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 54365412}
+  m_Layer: 0
+  m_Name: billiards cue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &54365412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54365411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.19, y: 7.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1663696084}
+  - {fileID: 276145330}
+  - {fileID: 1104486800}
+  - {fileID: 653548598}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &58628922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,12 +1740,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276145328}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.19, y: 7.09, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.7199998, z: 0}
   m_LocalScale: {x: 0.6157547, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 54365412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &305484195
 GameObject:
@@ -3388,11 +3423,11 @@ Transform:
   m_GameObject: {fileID: 653548596}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.99999934, w: -0.0011337547}
-  m_LocalPosition: {x: -16.19, y: 7.81, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6157547, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 54365412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180.13}
 --- !u!1 &676687956
 GameObject:
@@ -5473,11 +5508,11 @@ Transform:
   m_GameObject: {fileID: 1104486798}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.99999934, w: -0.0011337547}
-  m_LocalPosition: {x: 15.82, y: -7.12, z: 0}
+  m_LocalPosition: {x: 32.010002, y: -14.93, z: 0}
   m_LocalScale: {x: 0.6157547, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 54365412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180.13}
 --- !u!1 &1115710649
 GameObject:
@@ -7540,12 +7575,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663696082}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.82, y: -7.84, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 32.010002, y: -15.65, z: 0}
   m_LocalScale: {x: 0.6157547, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 54365412}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1691206290
 GameObject:
@@ -9481,13 +9516,10 @@ SceneRoots:
   - {fileID: 451525173}
   - {fileID: 1276647659}
   - {fileID: 2023612480}
+  - {fileID: 54365412}
   - {fileID: 329114435}
   - {fileID: 1213072903}
   - {fileID: 1429869503}
   - {fileID: 235741003}
   - {fileID: 1124844664}
   - {fileID: 221886087}
-  - {fileID: 1663696084}
-  - {fileID: 276145330}
-  - {fileID: 1104486800}
-  - {fileID: 653548598}
