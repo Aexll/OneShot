@@ -2276,7 +2276,7 @@ PrefabInstance:
     - target: {fileID: 3624648277751717037, guid: a9d59b4927d94ff449107a4b5d0754af, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 8814810614515714545, guid: d61ebf368db9c3047ab6d1ac5fc03d1c, type: 3}
+      objectReference: {fileID: 8814810614515714545, guid: fac06d6394a57bd40be204d00a0d11ea, type: 3}
     - target: {fileID: 3624648277751717037, guid: a9d59b4927d94ff449107a4b5d0754af, type: 3}
       propertyPath: rotationSpeed
       value: 200
