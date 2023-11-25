@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1295564759256042814, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
+      propertyPath: spawnable
+      value: 
+      objectReference: {fileID: 5254079235194065714, guid: a02a843697a2ebe4c94e6dd5884a5efa, type: 3}
     - target: {fileID: 2944455717599868719, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_Color.b
       value: 1
