@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      billard_0: -2947355705170078549
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
