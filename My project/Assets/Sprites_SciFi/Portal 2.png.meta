@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:My project/Assets/Game/Sprite/Character/Archer.png.meta
-guid: 8fbf7a3e88540f343965cf6660809eee
+guid: 6ca5bbd730e14cf48b5f12209a6b35a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7132172409892320828
-    second: Archer_0
-========
-guid: bfbe80626ac211c4781d80ef7105ce07
-TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 6639856913833541127
-    second: Portal 1_0
->>>>>>>> Final:My project/Assets/Sprites_SciFi/Portal 1.png.meta
+      213: -3880149659630137390
+    second: Portal 2_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -103,42 +94,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<<< HEAD:My project/Assets/Game/Sprite/Character/Archer.png.meta
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-========
->>>>>>>> Final:My project/Assets/Sprites_SciFi/Portal 1.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-<<<<<<<< HEAD:My project/Assets/Game/Sprite/Character/Archer.png.meta
-      name: Archer_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 103
-        width: 392
-        height: 172
-========
-      name: Portal 1_0
+      name: Portal 2_0
       rect:
         serializedVersion: 2
         x: 345
         y: 114
         width: 310
         height: 785
->>>>>>>> Final:My project/Assets/Sprites_SciFi/Portal 1.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,13 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-<<<<<<<< HEAD:My project/Assets/Game/Sprite/Character/Archer.png.meta
-      spriteID: 4c9c6872bfe650d90800000000000000
-      internalID: -7132172409892320828
-========
-      spriteID: 70e38740fa2852c50800000000000000
-      internalID: 6639856913833541127
->>>>>>>> Final:My project/Assets/Sprites_SciFi/Portal 1.png.meta
+      spriteID: 2df84664170f62ac0800000000000000
+      internalID: -3880149659630137390
       vertices: []
       indices: 
       edges: []
@@ -168,11 +129,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-<<<<<<<< HEAD:My project/Assets/Game/Sprite/Character/Archer.png.meta
-      Archer_0: -7132172409892320828
-========
-      Portal 1_0: 6639856913833541127
->>>>>>>> Final:My project/Assets/Sprites_SciFi/Portal 1.png.meta
+      Portal 2_0: -3880149659630137390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
