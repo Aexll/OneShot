@@ -311,7 +311,7 @@ PrefabInstance:
     - target: {fileID: 6800252994520821575, guid: 97ed41c6f2c4c0d42aeb8173e9377f06, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 3732930164883474967, guid: 0e3dea009bae26a4ba7fc61f133159c5, type: 3}
+      objectReference: {fileID: 3732930164883474967, guid: 2bb0459de0d15c74da2f691ff919a673, type: 3}
     - target: {fileID: 7409445656229881336, guid: 97ed41c6f2c4c0d42aeb8173e9377f06, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
