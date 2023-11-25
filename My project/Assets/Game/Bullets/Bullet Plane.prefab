@@ -85,13 +85,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2129767439704089453}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.99999887, w: -0.0015299468}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1258, y: 0.1258, z: 0.1258}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7069088540952553057}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180.175}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2486266351740529444
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -132,8 +132,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2105275379
   m_SortingLayer: 4
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 3817544801079559593, guid: dfd73b32da848704e969b5e776fc28e5, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -5681613791555460825, guid: abf55bc8b7aa3c743a7aa826445c7bf6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 1
@@ -202,10 +202,10 @@ GameObject:
   - component: {fileID: 2878186213930164096}
   - component: {fileID: 9076978397591925401}
   - component: {fileID: 1403104320049600961}
-  - component: {fileID: 4139859895865015066}
   - component: {fileID: 3836371451579448203}
+  - component: {fileID: 7474247840914460906}
   m_Layer: 6
-  m_Name: Bullet
+  m_Name: Bullet Plane
   m_TagString: dmg
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,8 +221,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1338, y: 1.1338, z: 1.1338}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.7, y: 2.7, z: 2.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7069088540952553057}
   - {fileID: 1084254497793850206}
@@ -245,7 +245,7 @@ MonoBehaviour:
   timecomp: {fileID: 1403104320049600961}
   orientTowardMovement: {fileID: 7069088540952553057}
   rb: {fileID: 3836371451579448203}
-  _collider: {fileID: 4139859895865015066}
+  _collider: {fileID: 7474247840914460906}
   impulse: 20
 --- !u!114 &1403104320049600961
 MonoBehaviour:
@@ -318,7 +318,34 @@ MonoBehaviour:
         m_CallState: 2
   bInterpolating: 0
   isreadinghistory: 0
---- !u!58 &4139859895865015066
+--- !u!50 &3836371451579448203
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732930164883474967}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 5ae89b0b7ea3fce47a6d33abe38cbea4, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &7474247840914460906
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -352,35 +379,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.43
---- !u!50 &3836371451579448203
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3732930164883474967}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 5ae89b0b7ea3fce47a6d33abe38cbea4, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Offset: {x: 0.223361, y: -0.0023145587}
+  m_Radius: 0.08915448
 --- !u!1 &7148368057447689697
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +454,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2105275379
   m_SortingLayer: 4
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Time: 0.25
   m_PreviewTimeScale: 1
   m_Parameters:
