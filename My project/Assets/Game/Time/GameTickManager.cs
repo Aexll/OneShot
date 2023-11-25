@@ -19,6 +19,7 @@ public class GameTickManager : MonoBehaviour
     public UnityEvent<float> OnTickTime;
     public UnityEvent<string> OnTickTimeString;
     public UnityEvent<string> OnTickTimeLeftString;
+    public UnityEvent<float> OnTickTimeLeftPercent;
 
 
     private void OnEnable()
@@ -49,6 +50,7 @@ public class GameTickManager : MonoBehaviour
         OnTickTime?.Invoke(GT.TickIndex * GT.tickDelta);
         OnTickTimeString?.Invoke((GT.TickIndex * GT.tickDelta).ToString());
         OnTickTimeLeftString?.Invoke((GM.LoopTime - (GT.TickIndex * GT.tickDelta)).ToString());
+        OnTickTimeLeftPercent?.Invoke((GM.LoopTime - (GT.TickIndex * GT.tickDelta)));
     }
 
     public void StartGame()

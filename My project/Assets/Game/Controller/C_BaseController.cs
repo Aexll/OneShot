@@ -32,6 +32,9 @@ public class C_BaseController : MonoBehaviour
     public float defaultRotationAngle;
 
 
+    public UnityEvent EventPlayGame;
+    public UnityEvent EventPlayAim;
+
     // events
     public UnityEvent OnPlayerDie;
 
@@ -73,6 +76,7 @@ public class C_BaseController : MonoBehaviour
     // start
     private void StartGame()
     {
+        EventPlayGame?.Invoke();
         ShootBullets();
         moveMode = true;
         aimMode = false;
@@ -102,6 +106,7 @@ public class C_BaseController : MonoBehaviour
 
     private void StartAim()
     {
+        EventPlayAim?.Invoke();
         aimMode = true;
         moveMode = false;
         stopedMode = false;
