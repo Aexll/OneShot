@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: abf55bc8b7aa3c743a7aa826445c7bf6
+guid: 80aafe905c1f94346ba826dfe408a02c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5681613791555460825
-    second: plane_0
+      213: 5692991415414712409
+    second: Galaxy_View_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plane_0
+      name: Galaxy_View_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 492
-        height: 285
+        width: 984
+        height: 573
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 721606beb5ad621b0800000000000000
-      internalID: -5681613791555460825
+      spriteID: 95864219781910f40800000000000000
+      internalID: 5692991415414712409
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      plane_0: -5681613791555460825
+      Galaxy_View_0: 5692991415414712409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
