@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-meleeattack_knife_3_0: 7689176024954881235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

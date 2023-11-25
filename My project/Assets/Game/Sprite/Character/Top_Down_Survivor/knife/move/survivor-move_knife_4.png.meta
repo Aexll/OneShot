@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-move_knife_4_0: -1451427491220716486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

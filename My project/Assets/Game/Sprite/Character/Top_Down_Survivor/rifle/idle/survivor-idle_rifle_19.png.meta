@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-idle_rifle_19_0: 4137971984388491014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

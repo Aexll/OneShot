@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-move_shotgun_17_0: -7842492203118416344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
