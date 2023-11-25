@@ -131,7 +131,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2105275379
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -4346244404228752641, guid: 4579ee9b1d9d03341816c4be50331db9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -247,6 +247,12 @@ MonoBehaviour:
   rb: {fileID: 3836371451579448203}
   _collider: {fileID: 4139859895865015066}
   impulse: 20
+  OnBulletLaunched:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBulletBounce:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1403104320049600961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,7 +459,7 @@ TrailRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2105275379
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Time: 0.25
   m_PreviewTimeScale: 1
@@ -511,7 +517,7 @@ TrailRenderer:
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 36430
+      atime0: 10023
       atime1: 65535
       atime2: 0
       atime3: 0
