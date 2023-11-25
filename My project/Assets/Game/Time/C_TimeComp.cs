@@ -77,10 +77,7 @@ public class C_TimeComp : MonoBehaviour
         TimeFrame tf = new TimeFrame();
         tf.position = transform.position;
         if (rb && rb.bodyType == RigidbodyType2D.Dynamic)
-        { 
             tf.velocity = rb.velocity;
-            tf.torque = rb.angularVelocity;
-        }
         if (rotating)
             tf.rotation = rotating.rotation.eulerAngles.z;
         return tf;
@@ -153,7 +150,6 @@ public class C_TimeComp : MonoBehaviour
                 //rb.simulated = true;
                 rb.bodyType = RigidbodyType2D.Dynamic;
                 rb.velocity = tf.velocity;
-                rb.angularVelocity = tf.torque;
             }
         }
     }
