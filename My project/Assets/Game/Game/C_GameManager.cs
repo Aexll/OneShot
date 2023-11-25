@@ -18,6 +18,12 @@ interface IGameTick
     public void UpdateTick(int tick);
 }
 
+interface IDamageable
+{
+
+    public void TakeDamage(bool past, float damage);
+}
+
 public class C_GameManager : MonoBehaviour
 {
 

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using static UnityEngine.UI.ContentSizeFitter;
 
-public class C_Bullet : MonoBehaviour
+public class C_Bullet : MonoBehaviour, IGameLoop
 {
     public GameTick GT;
     public SO_GameInfo GI;
@@ -16,6 +16,11 @@ public class C_Bullet : MonoBehaviour
     public Collider2D _collider;
 
     public float impulse = 1;
+    public float torque = 0;
+    public float bulletDamage = 1;
+    public bool fromPast = false;
+
+    public bool rotatetoward = true;
 
 
     //events
@@ -59,6 +64,7 @@ public class C_Bullet : MonoBehaviour
         if(rb.bodyType == RigidbodyType2D.Dynamic)
         {
             rb.AddForce(transform.right * impulse, ForceMode2D.Impulse);
+            rb.AddTorque(torque);
             OnBulletLaunched?.Invoke();
         }
     }
@@ -73,6 +79,7 @@ public class C_Bullet : MonoBehaviour
         orientTowardMovement.gameObject.SetActive(false);
         _collider.enabled = false;
         gameObject.layer = 9;
+        fromPast = true;
     }
 
     public void EnableCollision()
@@ -94,7 +101,7 @@ public class C_Bullet : MonoBehaviour
             rb.velocity = Vector2.zero;
         }
 
-        if (!timecomp.bInterpolating && !GT.isPaused)
+        if (!timecomp.bInterpolating && !GT.isPaused && rotatetoward)
         {
             // orient toward direction
             float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
@@ -106,7 +113,24 @@ public class C_Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         OnBulletBounce?.Invoke();
+        IDamageable i = GameObjectExtensions.GetInterface<IDamageable>(collision.gameObject);
+        if(i != null)
+        {
+            i.TakeDamage(fromPast, bulletDamage);
+        }
+        
     }
 
+    public void OnStartAim()
+    {
+    }
 
+    public void OnStartGame()
+    {
+    }
+
+    public void OnStartRewind()
+    {
+        gameObject.SetActive(true);
+    }
 }
