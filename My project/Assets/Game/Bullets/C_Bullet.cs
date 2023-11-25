@@ -41,8 +41,14 @@ public class C_Bullet : MonoBehaviour
     // start
     private void StartGame()
     {
+        _collider.enabled = true;
         orientTowardMovement.gameObject.SetActive(true);
-        _collider.enabled = false;
+        LayerMask inmasks = new LayerMask();
+        LayerMask exmasks = new LayerMask();
+        inmasks.value = LayerMask.GetMask("Walls");
+        exmasks.value = LayerMask.GetMask("Bullet", "Player");
+        _collider.excludeLayers = exmasks;
+        _collider.includeLayers = inmasks;
         Invoke(nameof(EnableCollision), 0.5f);
         if(rb.bodyType == RigidbodyType2D.Dynamic)
             rb.AddForce(transform.right * impulse, ForceMode2D.Impulse);
@@ -61,7 +67,13 @@ public class C_Bullet : MonoBehaviour
 
     public void EnableCollision()
     {
-        _collider.enabled = true;
+        //_collider.enabled = true;
+        LayerMask inmasks = new LayerMask();
+        LayerMask exmasks = new LayerMask();
+        inmasks.value = LayerMask.GetMask("Player","Walls");
+        exmasks.value = LayerMask.GetMask("Bullet");
+        _collider.excludeLayers = exmasks;
+        _collider.includeLayers = inmasks;
     }
 
     // Update is called once per frame
