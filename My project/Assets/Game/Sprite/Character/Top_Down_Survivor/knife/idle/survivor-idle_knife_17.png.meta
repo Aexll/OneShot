@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-idle_knife_17_0: -7428525860421917675
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

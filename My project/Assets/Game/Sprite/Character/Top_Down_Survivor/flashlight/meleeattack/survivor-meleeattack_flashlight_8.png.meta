@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-meleeattack_flashlight_8_0: 168932426109657491
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

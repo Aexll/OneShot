@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-meleeattack_handgun_9_0: 2190760759099441788
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

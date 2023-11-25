@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-reload_handgun_7_0: 2505993668823830179
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

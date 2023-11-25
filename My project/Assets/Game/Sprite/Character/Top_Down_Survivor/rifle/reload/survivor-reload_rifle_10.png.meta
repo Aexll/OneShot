@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-reload_rifle_10_0: -4050465410002561185
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

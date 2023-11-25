@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-idle_shotgun_0_0: 3987934244570577244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

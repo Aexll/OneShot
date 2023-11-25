@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      survivor-move_flashlight_2_0: 8822317116616608080
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
