@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class C_Breakable : MonoBehaviour, IGameLoop, IGameTick
+public class C_Breakable : MonoBehaviour, IGameLoop, IGameTick, IDamageable
 {
 
     public Sprite[] sprites;
@@ -57,10 +57,10 @@ public class C_Breakable : MonoBehaviour, IGameLoop, IGameTick
         _collider.contactCaptureLayers = includeLayerMask;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+/*    private void OnCollisionEnter2D(Collision2D collision)
     {
         DealDamage(false);
-    }
+    }*/
 
     public void DealDamage(bool replayed)
     {
@@ -87,6 +87,14 @@ public class C_Breakable : MonoBehaviour, IGameLoop, IGameTick
             {
                 DealDamage(true);
             }
+        }
+    }
+
+    public void TakeDamage(bool past, float damage)
+    {
+        if (!past)
+        {
+            DealDamage(false);
         }
     }
 }
