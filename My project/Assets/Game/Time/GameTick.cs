@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,12 +17,6 @@ public class GameTick : ScriptableObject
         set {
             tickIndex = value;
             OnTickIndexChanged?.Invoke();
-
-            IGameTick[] gameloopable = FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.InstanceID).OfType<IGameTick>().ToArray();
-            foreach (var item in gameloopable)
-            {
-                item.UpdateTick(value);
-            }
         }
     }
 
