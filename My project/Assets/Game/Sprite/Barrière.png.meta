@@ -140,7 +140,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Barri\xE8re_0": -318659751382181028
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

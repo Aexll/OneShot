@@ -260,7 +260,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Nonos 2_0: 2357700024999060508
+      Nonos 2_1: -4917384309715547516
+      Nonos 2_2: -6409540946658741011
+      Nonos 2_3: 1840362770696042511
+      Nonos 2_4: -5902161598192274633
+      Nonos 2_5: -8478734748105835574
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
