@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameTickManager : MonoBehaviour
 {
@@ -8,8 +9,17 @@ public class GameTickManager : MonoBehaviour
     // know the game state
     public SO_GameInfo GI;
 
+    public C_GameManager GM;
+
 
     public GameTick GT;
+
+
+    public UnityEvent<int> OnTick;
+    public UnityEvent<float> OnTickTime;
+    public UnityEvent<string> OnTickTimeString;
+    public UnityEvent<string> OnTickTimeLeftString;
+    public UnityEvent<float> OnTickTimeLeftPercent;
 
 
     private void OnEnable()
@@ -36,6 +46,11 @@ public class GameTickManager : MonoBehaviour
     { 
         if (!GT.isPaused)
             GT.TickIndex++;
+        OnTick?.Invoke(GT.TickIndex);
+        OnTickTime?.Invoke(GT.TickIndex * GT.tickDelta);
+        OnTickTimeString?.Invoke((GT.TickIndex * GT.tickDelta).ToString());
+        OnTickTimeLeftString?.Invoke((GM.LoopTime - (GT.TickIndex * GT.tickDelta)).ToString());
+        OnTickTimeLeftPercent?.Invoke((GM.LoopTime - (GT.TickIndex * GT.tickDelta)));
     }
 
     public void StartGame()
@@ -51,6 +66,7 @@ public class GameTickManager : MonoBehaviour
     public void StartRewind()
     {
         GT.isPaused = true;
+        GT.TickIndex = 0;
     }
 
 

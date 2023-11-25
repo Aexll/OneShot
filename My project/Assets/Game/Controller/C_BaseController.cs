@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class C_BaseController : MonoBehaviour
 {
     // know the game state
     public SO_GameInfo GI;
+    public C_GameManager GameManager;
+
+    // infos
+    public string playerName;
 
 
     public SO_InputMapping inputMapping;
@@ -20,10 +25,18 @@ public class C_BaseController : MonoBehaviour
     public bool aimMode = false;
 
     public GameObject bulletPrefab;
+    public GameObject bulletPrefab_bonus = null;
 
 
     public Vector2 defaultPosition;
     public float defaultRotationAngle;
+
+
+    public UnityEvent EventPlayGame;
+    public UnityEvent EventPlayAim;
+
+    // events
+    public UnityEvent OnPlayerDie;
 
     private void Awake()
     {
@@ -63,18 +76,37 @@ public class C_BaseController : MonoBehaviour
     // start
     private void StartGame()
     {
+        EventPlayGame?.Invoke();
+        ShootBullets();
         moveMode = true;
         aimMode = false;
-        stopedMode =false;  
+        stopedMode = false;  
 
-        GameObject spawnedbullet = Instantiate(bulletPrefab);
+    }
+
+    public void ShootBullets()
+    {
+        GameObject selectedPrefab;
+
+        selectedPrefab = bulletPrefab;
+
+        // use the bonus
+        if(bulletPrefab_bonus != null)
+            selectedPrefab = bulletPrefab_bonus;
+
+
+
+        GameObject spawnedbullet = Instantiate(selectedPrefab);
         spawnedbullet.transform.position = transform.position;
         spawnedbullet.transform.rotation = transform.rotation;
+
+        // remove bonus
+        bulletPrefab_bonus = null;
     }
 
     private void StartAim()
     {
-        ResetPosAndRot();
+        EventPlayAim?.Invoke();
         aimMode = true;
         moveMode = false;
         stopedMode = false;
@@ -82,6 +114,7 @@ public class C_BaseController : MonoBehaviour
 
     private void StartRewind()
     {
+        ResetPosAndRot();
         aimMode = false;
         moveMode = false;
         stopedMode = true;
@@ -89,15 +122,15 @@ public class C_BaseController : MonoBehaviour
 
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "dmg")
+        if (collision.gameObject.tag == "dmg")
         {
+            OnPlayerDie?.Invoke();
+            GI.OnPlayerWin?.Invoke(playerName);
             Destroy(gameObject);
         }
     }
-
-
 
 
 

@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7409445656229881336}
   - component: {fileID: 3688579622383626774}
   - component: {fileID: 6800252994520821575}
+  - component: {fileID: 1295564759256042814}
   - component: {fileID: 652805831557684060}
   - component: {fileID: 6190154493159447642}
   m_Layer: 7
@@ -185,6 +186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GI: {fileID: 11400000, guid: 5a9c4bb5481987c42a4398afa7690242, type: 2}
+  GameManager: {fileID: 0}
+  playerName: Red
   inputMapping: {fileID: 11400000, guid: feb9dc4ed81f5714c84b2e48d86c0df1, type: 2}
   rb: {fileID: 652805831557684060}
   speed: 10
@@ -194,6 +197,72 @@ MonoBehaviour:
   moveMode: 0
   aimMode: 0
   bulletPrefab: {fileID: 3732930164883474967, guid: 5c5b8fc601c3fc540b70a9c14aedd27f, type: 3}
+  bulletPrefab_bonus: {fileID: 0}
+  defaultPosition: {x: 0, y: 0}
+  defaultRotationAngle: 0
+  EventPlayGame:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 372361883739035819}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  EventPlayAim:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 372361883739035819}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnPlayerDie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1295564759256042814}
+        m_TargetAssemblyTypeName: C_Spawner, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1295564759256042814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4294568844984213113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e86a97e3e66c544b650b82596fc960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventSpawn:
+    m_PersistentCalls:
+      m_Calls: []
+  spawnable: {fileID: 6297346915636124444, guid: 18bb5f4212794bd4bbadcd8bbfa6b0bd, type: 3}
+  spawnableTransform: {fileID: 0}
+  spawnSize: {x: 1, y: 1, z: 1}
 --- !u!50 &652805831557684060
 Rigidbody2D:
   serializedVersion: 4
