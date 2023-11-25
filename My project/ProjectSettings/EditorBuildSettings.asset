@@ -11,17 +11,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/MainMenu.unity
     guid: 5e8482a85a475e741af6482d78489da4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Game/Scenes/LVL1.unity
     guid: 770f41d829256714bb82826e1da4fd6b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Game/Scenes/LVL2.unity
     guid: 90d685830e62d504597d838763a44460
   - enabled: 1
-    path: Assets/Game/Scenes/LVL3.unity
-    guid: ab970e8e7c6b9cb40b18a66805b0f036
+    path: Assets/Game/Scenes/Tutorial_Level.unity
+    guid: 1541be4a3df9bff4a910febae96a6dd5
   - enabled: 1
-    path: Assets/Game/Scenes/LD_Medieval56.unity
-    guid: 3a7e435fb768a96499b445216fccf1e6
+    path: Assets/Game/Scenes/LD_Medieval.unity
+    guid: 4fafcdfffc667294f9653b78cc064604
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
