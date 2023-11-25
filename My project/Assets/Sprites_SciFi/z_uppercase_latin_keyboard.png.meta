@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a9a728533a4e7fe42ae5ae29f019a2ff
+guid: 50b122978be708f45b4285ae94c0a8c5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1561010384282579773
-    second: Blue_Pad_0
+      213: 5119218167300272614
+    second: z_uppercase_latin_keyboard_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blue_Pad_0
+      name: z_uppercase_latin_keyboard_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 453
-        height: 460
+        x: 10
+        y: 10
+        width: 280
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cc042a735d265ae0800000000000000
-      internalID: -1561010384282579773
+      spriteID: 6e1b8a5eccd1b0740800000000000000
+      internalID: 5119218167300272614
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Blue_Pad_0: -1561010384282579773
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

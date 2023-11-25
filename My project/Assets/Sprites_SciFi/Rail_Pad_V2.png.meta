@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Rail_Pad_V2_0: -4132457340263528809
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

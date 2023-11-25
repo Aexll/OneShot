@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SciFi-Pads_0: -363795494246902746
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
