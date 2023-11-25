@@ -23,10 +23,6 @@ public class C_Bullet : MonoBehaviour, IGameLoop
     public bool rotatetoward = true;
 
 
-    public LayerMask docollide;
-    public LayerMask donotcollide;
-
-
     //events
     public UnityEvent OnBulletLaunched;
     public UnityEvent OnBulletBounce;
@@ -60,7 +56,7 @@ public class C_Bullet : MonoBehaviour, IGameLoop
         orientTowardMovement.gameObject.SetActive(true);
         LayerMask inmasks = new LayerMask();
         LayerMask exmasks = new LayerMask();
-        inmasks.value = docollide; //LayerMask.GetMask("Walls");
+        inmasks.value = LayerMask.GetMask("Walls");
         exmasks.value = LayerMask.GetMask("Bullet", "PastBullet", "Player");
         _collider.excludeLayers = exmasks;
         _collider.includeLayers = inmasks;
@@ -91,7 +87,7 @@ public class C_Bullet : MonoBehaviour, IGameLoop
         //_collider.enabled = true;
         LayerMask inmasks = new LayerMask();
         LayerMask exmasks = new LayerMask();
-        inmasks.value = LayerMask.GetMask("Player") | docollide;
+        inmasks.value = LayerMask.GetMask("Player","Walls");
         exmasks.value = LayerMask.GetMask("Bullet","PastBullet");
         _collider.excludeLayers = exmasks;
         _collider.includeLayers = inmasks;
