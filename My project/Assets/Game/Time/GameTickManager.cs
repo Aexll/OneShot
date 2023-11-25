@@ -9,6 +9,8 @@ public class GameTickManager : MonoBehaviour
     // know the game state
     public SO_GameInfo GI;
 
+    public C_GameManager GM;
+
 
     public GameTick GT;
 
@@ -16,6 +18,7 @@ public class GameTickManager : MonoBehaviour
     public UnityEvent<int> OnTick;
     public UnityEvent<float> OnTickTime;
     public UnityEvent<string> OnTickTimeString;
+    public UnityEvent<string> OnTickTimeLeftString;
 
 
     private void OnEnable()
@@ -45,6 +48,7 @@ public class GameTickManager : MonoBehaviour
         OnTick?.Invoke(GT.TickIndex);
         OnTickTime?.Invoke(GT.TickIndex * GT.tickDelta);
         OnTickTimeString?.Invoke((GT.TickIndex * GT.tickDelta).ToString());
+        OnTickTimeLeftString?.Invoke((GM.LoopTime - (GT.TickIndex * GT.tickDelta)).ToString());
     }
 
     public void StartGame()
