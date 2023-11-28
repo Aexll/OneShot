@@ -71,10 +71,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2105275379
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.18266296, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.13546276, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -98,11 +98,7 @@ GameObject:
   - component: {fileID: 6190154493159447642}
   - component: {fileID: 4978463446570827710}
   m_Layer: 7
-<<<<<<<< HEAD:My project/Assets/Game/Controller/P2 Medieval.prefab
   m_Name: P2 Medieval
-========
-  m_Name: P1_Sci_Fi
->>>>>>>> Final:My project/Assets/Game/Controller/P1_Sci_Fi.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,14 +138,21 @@ MonoBehaviour:
   inputMapping: {fileID: 11400000, guid: 1c955cfc828d65a40ada6133f4675b4c, type: 2}
   rb: {fileID: 652805831557684060}
   speed: 10
-  rotationSpeed: 100
+  rotationSpeed: 200
   inputDirection: {x: 0, y: 0}
   stopedMode: 0
   moveMode: 0
   aimMode: 0
   bulletPrefab: {fileID: 3732930164883474967, guid: 5c5b8fc601c3fc540b70a9c14aedd27f, type: 3}
+  bulletPrefab_bonus: {fileID: 0}
   defaultPosition: {x: 0, y: 0}
   defaultRotationAngle: 0
+  EventPlayGame:
+    m_PersistentCalls:
+      m_Calls: []
+  EventPlayAim:
+    m_PersistentCalls:
+      m_Calls: []
   OnPlayerDie:
     m_PersistentCalls:
       m_Calls: []
@@ -255,10 +258,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2105275379
-  m_SortingLayer: 4
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3e79f4352c2ac65409e62e9a1886414b, type: 3}
-  m_Color: {r: 0.6745098, g: 0.7267886, b: 1, a: 1}
+  m_Color: {r: 0.3820755, g: 0.3944057, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -46,12 +46,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4294568844984213113, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_Name
-      value: P2 1
+      value: P2 Scifi
       objectReference: {fileID: 0}
     - target: {fileID: 6800252994520821575, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: inputMapping
       value: 
       objectReference: {fileID: 11400000, guid: 1c955cfc828d65a40ada6133f4675b4c, type: 2}
+    - target: {fileID: 6800252994520821575, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
+      propertyPath: rotationSpeed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7409445656229881336, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

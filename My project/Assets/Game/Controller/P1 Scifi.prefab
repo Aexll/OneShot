@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
     - target: {fileID: 2944455717599868719, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2944455717599868719, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_Color.g
-      value: 0.19270587
+      value: 0.27120164
       objectReference: {fileID: 0}
     - target: {fileID: 2944455717599868719, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2944455717599868719, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_SortingOrder
@@ -34,24 +34,28 @@ PrefabInstance:
       objectReference: {fileID: 6913432045478330568, guid: b027308fd09e54c459374deed53c8843, type: 3}
     - target: {fileID: 3688579622383626774, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3688579622383626774, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_Color.g
-      value: 0.5882353
+      value: 0.27400643
       objectReference: {fileID: 0}
     - target: {fileID: 3688579622383626774, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_Color.r
-      value: 0.5882353
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4294568844984213113, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_Name
-      value: P2 1
+      value: P1 Scifi
       objectReference: {fileID: 0}
     - target: {fileID: 6800252994520821575, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: inputMapping
       value: 
-      objectReference: {fileID: 11400000, guid: 1c955cfc828d65a40ada6133f4675b4c, type: 2}
+      objectReference: {fileID: 11400000, guid: feb9dc4ed81f5714c84b2e48d86c0df1, type: 2}
+    - target: {fileID: 6800252994520821575, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
+      propertyPath: rotationSpeed
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7409445656229881336, guid: c4126091f91726e4fb66ffcaedc04a29, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Game/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Game/Scenes/MainMenu.unity
     guid: 5e8482a85a475e741af6482d78489da4
+  - enabled: 1
+    path: Assets/Game/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0
     path: Assets/Game/Scenes/LVL1.unity
     guid: 770f41d829256714bb82826e1da4fd6b
@@ -23,5 +23,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Game/Scenes/LD_Medieval.unity
     guid: 4fafcdfffc667294f9653b78cc064604
+  - enabled: 1
+    path: Assets/Game/Scenes/AxelTestScene.unity
+    guid: acc74e845104e4e48b8807eaea1a69ee
+  - enabled: 1
+    path: Assets/Game/Scenes/LD_SciFi_V2.unity
+    guid: 08125d980f3b414468e612f723c4c5d9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

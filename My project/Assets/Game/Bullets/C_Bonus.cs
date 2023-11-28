@@ -9,6 +9,8 @@ public class C_Bonus : MonoBehaviour, IGameLoop
 
     public GameObject m_PrefabBonus;
 
+    public GameObject[] prefabs;
+
     public GameObject visual;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -18,7 +20,7 @@ public class C_Bonus : MonoBehaviour, IGameLoop
             var controller = collision.gameObject.GetComponent<C_BaseController>();
             if (controller != null)
             {
-                controller.bulletPrefab_bonus = m_PrefabBonus;
+                controller.bulletPrefab_bonus = prefabs[Random.Range(0,prefabs.Length)];
                 SetCollectedState(true);
             }
         }
